@@ -1,0 +1,7 @@
+*.fastq
+*.sam
+*.bam
+*.out
+*.log
+results/
+data/
