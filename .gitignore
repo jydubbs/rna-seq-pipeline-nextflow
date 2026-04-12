@@ -1,7 +1,25 @@
-*.fastq
+# Raw and processed data
+data/raw/
+data/processed/
+results/
+
+# FastQC outputs
+*.html
+*.zip
+
+# Alignment/count files
 *.sam
 *.bam
-*.out
-*.log
-results/
-data/
+*.bai
+*.counts.txt
+
+# Nextflow working files
+work/
+.nextflow*
+trace.txt
+timeline.html
+report.html
+dag.html
+
+# macOS
+.DS_Store
