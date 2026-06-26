@@ -24,23 +24,17 @@ Pipeline workflow:
 9. Differential expression analysis (DESeq2 - planned/pending)
 
 ## Project structure
+```text
 .
-
 ├── workflow/
-
 │   └── main.nf
-
 ├── scripts/
-
 ├── samples.csv
-
 ├── run_nextflow.sh
-
 ├── download_fastq.sh
-
 ├── build_index.sh
-
 ├── README.md
+```
 
 Large files are excluded from Git using .gitignore, such as:
 - FASTQ files
@@ -78,6 +72,7 @@ nextflow run workflow/main.nf -resume
 ```
 
 ## Outputs:
+```text
 results/
 ├── bam/
 │   ├── *.sorted.bam
@@ -87,6 +82,7 @@ results/
 │   └── gene_counts.txt.summary
 ├── hisat2/
 └── trimgalore/
+```
 
 ## Current Status
 - ✓ Downloaded RNA-seq data from NCBI SRA
