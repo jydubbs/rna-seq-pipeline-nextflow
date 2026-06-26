@@ -123,3 +123,9 @@ Quality control figures:
 - ✓ Quantified gene expression using featureCounts
 - ✓ Successfully executed the workflow on the QMUL Apocrita HPC cluster
 - ✓ Differential expression analysis with DESeq2
+
+## Potential Future Additions
+- volcano plots
+- heatmaps of top DE genes
+- GO enrichment
+- pathway analysis
