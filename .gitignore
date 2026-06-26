@@ -47,3 +47,6 @@ dag.html
 
 # macOS
 .DS_Store
+
+# CSV results
+analysis/results/
