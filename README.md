@@ -84,6 +84,7 @@ If the pipeline is interrupted, it can be resumed without repeating completed st
 ```bash
 nextflow run workflow/main.nf -resume
 ```
+
 ## Results
 The RNA-seq workflow completed successfully for all six SKMES1 samples (3 control and 3 lung fibroblast secretome-treated samples).
 
