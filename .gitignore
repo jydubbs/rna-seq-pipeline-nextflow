@@ -48,5 +48,6 @@ dag.html
 # macOS
 .DS_Store
 
-# CSV results
-analysis/results/
+# DESeq2 analysis results
+analysis/results/*.csv
+analysis/plots/*.png
