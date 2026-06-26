@@ -84,6 +84,37 @@ If the pipeline is interrupted, it can be resumed without repeating completed st
 ```bash
 nextflow run workflow/main.nf -resume
 ```
+## Results
+The RNA-seq workflow completed successfully for all six SKMES1 samples (3 control and 3 lung fibroblast secretome-treated samples).
+
+### Quality control
+- All samples achieved approximately 94% overall alignment rate.
+- PCA showed clear separation between control and treated samples along the first principal component, indicating treatment-associated transcriptional differences.
+- Sample-to-sample correlation heatmap showed clustering of biological replicates, although a greater variability was found for one treated sample (SRR37447626) compared to the other treatment replicates.
+- Expression distributions were comparable across all samples, suggesting no obvious technical bias.
+
+### Differential expression analysis
+DESeq2 analysis identified genes differentially expressed between lung fibroblast secretome-treated and control SKMES1 cells.
+Results are provided as:
+- analysis/results/deseq2_results.csv
+- analysis/results/significant_genes_padj0.05_log2FC1.csv
+Quality control figures:
+- PCA plot
+- MA plot
+- Variance-stabilized expression boxplot
+
+## Example QC Figures
+### PCA
+![PCA](analysis/plots/pca_plot.png)
+
+### MA Plot
+![MA Plot](analysis/plots/ma_plot.png)
+
+### Sample Correlation Heatmap
+![Heatmap](analysis/plots/sample_correlation_heatmap.png)
+
+### VST Expression Distribution
+![Boxplot](analysis/plots/vst_expression_boxplot.png)
 
 ## Current Status
 - ✓ Downloaded RNA-seq data from NCBI SRA
