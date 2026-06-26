@@ -25,13 +25,21 @@ Pipeline workflow:
 
 ## Project structure
 .
+
 ├── workflow/
+
 │   └── main.nf
+
 ├── scripts/
+
 ├── samples.csv
+
 ├── run_nextflow.sh
+
 ├── download_fastq.sh
+
 ├── build_index.sh
+
 ├── README.md
 
 Large files are excluded from Git using .gitignore, such as:
