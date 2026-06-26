@@ -1,7 +1,31 @@
+# SRA download folders
+SRR*/
+
+# Temporary directories
+tmp/
+fasterq.tmp.*
+
+# Reference genome and indices
+reference/
+
+# Nextflow backup files
+*.save
+
+# Slurm output
+slurm-*
+
+# Job scripts outputs
+*_*.out
+*_*.err
+
 # Raw and processed data
 data/raw/
 data/processed/
 results/
+*.fastq
+*.fq
+*.fastq.gz
+*.fq.gz
 
 # FastQC outputs
 *.html
