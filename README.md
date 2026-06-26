@@ -21,19 +21,33 @@ Pipeline workflow:
 6. BAM indexing (SAMtools index)
 7. Gene quantification (featureCounts)
 8. gene_counts.txt
-9. Differential expression analysis (DESeq2 - planned/pending)
+9. Differential expression analysis (DESeq2)
+10. QC visualisation
 
 ## Project structure
 ```text
-.
+rna-seq-pipeline-nextflow/
+│
 ├── workflow/
 │   └── main.nf
-├── scripts/
-├── samples.csv
-├── run_nextflow.sh
+│
+├── analysis/
+│   ├── deseq2_analysis.R
+│   ├── plots/
+│   │   ├── pca_plot.png
+│   │   ├── ma_plot.png
+│   │   └── vst_expression_boxplot.png
+│   │
+│   └── results/
+│       └── significant_genes_padj0.05_log2FC1.csv
+│
+├── workflow/
 ├── download_fastq.sh
 ├── build_index.sh
+├── run_nextflow.sh
+├── samples.csv
 ├── README.md
+└── .gitignore
 ```
 
 Large files are excluded from Git using .gitignore, such as:
@@ -71,19 +85,6 @@ If the pipeline is interrupted, it can be resumed without repeating completed st
 nextflow run workflow/main.nf -resume
 ```
 
-## Outputs:
-```text
-results/
-├── bam/
-│   ├── *.sorted.bam
-│   └── *.bai
-├── counts/
-│   ├── gene_counts.txt
-│   └── gene_counts.txt.summary
-├── hisat2/
-└── trimgalore/
-```
-
 ## Current Status
 - ✓ Downloaded RNA-seq data from NCBI SRA
 - ✓ Built the HISAT2 reference genome index
@@ -92,4 +93,4 @@ results/
 - ✓ Sorted and indexed BAM files using SAMtools
 - ✓ Quantified gene expression using featureCounts
 - ✓ Successfully executed the workflow on the QMUL Apocrita HPC cluster
-- □ Differential expression analysis with DESeq2 (planned)
+- ✓ Differential expression analysis with DESeq2
