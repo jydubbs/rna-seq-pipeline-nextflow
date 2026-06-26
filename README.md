@@ -111,9 +111,6 @@ Quality control figures:
 ### MA Plot
 ![MA Plot](analysis/plots/ma_plot.png)
 
-### Sample Correlation Heatmap
-![Heatmap](analysis/plots/sample_correlation_heatmap.png)
-
 ### VST Expression Distribution
 ![Boxplot](analysis/plots/vst_expression_boxplot.png)
 
